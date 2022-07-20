@@ -23,7 +23,7 @@
             <nav>
                 <ul class="navigation">
                     {{-- <li id="logo"><a href="/"><lottie><x-si-caterpillar /></lottie></a></li> --}}
-                    <lottie><li id="logo"><a href="/"> </a></li></lottie>
+                    <li id="logo"><a href="/"> </a></li>
                     {{-- <li class="navigation-item"><a href="/login">Manage Nekos</a></li> --}}
                     <li class="navigation-item"><a href="/neko/create">Add Neko</a></li>
                     <li class="navigation-item">
@@ -34,9 +34,10 @@
                             </button>
                         </form>    
                     </li>
-                    <li id="dark-mode" class="navigation-item"><a href=""><x-si-caterpillar /></a></li>
+                    {{-- <li id="dark-mode" class="navigation-item"><a href=""><x-si-caterpillar /></a></li> --}}
+                    <li id="dark-mode" class="navigation-item"><a href=""></a></li>
                     <li id="burger-icon" class=""><x-majestic-menu-solid /></li>
-                    <lottie><li id="burger-menu-close" class="stealth"><x-icomoon-cross /></li></lottie>
+                    <li id="burger-menu-close" class="stealth"><x-icomoon-cross /></li>
                 </ul>
             </nav>
             <nav id="burger-menu" class="burger-menu stealth">
