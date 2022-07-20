@@ -32,7 +32,7 @@ const logoWhAnim = bodymovin.loadAnimation({
 
 const logoGrAnim = bodymovin.loadAnimation({
     container: logoGr, // Required
-    path: '/img/lottie/Pawnimatioin-grey.json', // Required
+    path: '/img/lottie/Pawnimation-grey.json', // Required
     renderer: 'svg', // Required
     loop: true, // Optional
     autoplay: false, // Optional
