@@ -58,50 +58,7 @@ logoWh.addEventListener('click', function () {
 });
 logoGr.addEventListener('click', function () {
   logoGrAnim.play();
-}); // Apply for cat dialogue
-// anchor link that is converted into a button
-
-var catApplyTrigger = document.querySelector('.neko-browse'); // selects whole dialog 
-
-var catApplyInput = document.getElementById('cat-apply');
-var catApplySubmit = document.getElementById('cat-apply-submit-btn');
-var catCloseDialog = document.querySelector('[data-dialog-close]');
-catApplyTrigger.addEventListener('click', catApplyDialogue);
-catApplyInput.addEventListener('close', catSubmitResults);
-catApplySubmit.addEventListener('click', catApplySubmitFun);
-catCloseDialog.addEventListener('click', closeDialog);
-
-function catApplyDialogue() {
-  catApplyInput.showModal();
-}
-
-function catSubmitResults() {
-  // cat
-  console.log(catApplyInput.returnValue);
-}
-
-function catApplySubmitFun() {
-  // catApplyInput.preventDefault();
-  catApplyInput.close(returnValue);
-  console.log(returnValue);
-} // closeDialog() => catApplyInput.close();
-// Shorthand doesn't work because I'm using a method? 
-
-
-function closeDialog() {
-  catApplyInput.setAttribute('close', ''); // setTimeout(() => {
-  //   catApplyInput.removeAttribute('close');
-  //   catApplyInput.close();
-  // }, 1000);
-
-  catApplyInput.addEventListener('animationend', function () {
-    catApplyInput.removeAttribute('close');
-    catApplyInput.close();
-  }, {
-    once: true
-  }); // You can do setTimeout() here as well
-  // catApplyInput.close();
-}
+});
 
 /***/ }),
 
