@@ -50,16 +50,26 @@ body {
 }
 
 #logo svg {
+    /* Styles for lottie */
+    padding: 5px;
+    /* Styles for simple svg */
     /* height: clamp(40px, 8vw, 3rem); */
-    position: relative;
-    top: 0.1em;
+    /* position: relative;
+    top: 0.1em; */
+}
+
+#dark-mode {
+    height: clamp(40px, 8vw, 4rem);
 }
 
 #dark-mode svg {
-    height: clamp(40px, 8vw, 3rem);
-    color: var(--main-background);
-    position: relative;
-    top: 0.1em;
+    /* Style for lottie */
+    padding: 5px;
+    /* Styles for simple svg */
+    /* height: clamp(40px, 8vw, 3rem); */
+    /* color: var(--main-background); */
+    /* position: relative;
+    top: 0.1em; */
 }
 
 /* Navigation */
