@@ -590,9 +590,9 @@ footer svg {
 }
 
 /* Audio Controller */
-audio::-webkit-media-controls-panel {
-    /* background-color: var(--main-background); */
-}
+/* audio::-webkit-media-controls-panel {
+    background-color: var(--main-background);
+} */
 
 /* Dialog (Adopt a Cat) */
 #cat-apply {
