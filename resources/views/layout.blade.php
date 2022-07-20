@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <link rel="icon" type="image/x-icon" href="{{ asset('/favicon.ico') }}">  
+        <link rel="icon" href="{{ url('favicon.ico') }}">  
         <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="/css/splide.min.css">
         <script type="module" src="/js/splide.min.js" defer></script>
@@ -12,7 +12,7 @@
         <script type="module" src="/js/logic.js" defer></script>
         <script type="module" src="/js/splide-checker.js" defer></script>
         <script type="module" src="/js/lottie.min.js" defer></script>
-        <title>Icekos</title>
+        <title>Nekos</title>
     </head>
     <body>
         @auth
