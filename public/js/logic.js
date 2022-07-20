@@ -15,6 +15,39 @@ function fadeIn(){
     burgerMenuCloser.classList.toggle('stealth');
 }
 
+
+
+// Logo Lottie
+const logoWh = document.querySelector('#logo');
+const logoGr = document.querySelector('#dark-mode');
+
+const logoWhAnim = bodymovin.loadAnimation({
+    container: logoWh, // Required
+    path: '/img/lottie/Pawnimation-white.json', // Required
+    renderer: 'svg', // Required
+    loop: true, // Optional
+    autoplay: false, // Optional
+    name: "Logo anim left", // Name for future reference. Optional.
+  })
+
+const logoGrAnim = bodymovin.loadAnimation({
+    container: logoGr, // Required
+    path: '/img/lottie/Pawnimatioin-grey.json', // Required
+    renderer: 'svg', // Required
+    loop: true, // Optional
+    autoplay: false, // Optional
+    name: "Logo anim right", // Name for future reference. Optional.
+  })
+
+logoWh.addEventListener('click', () => {
+    logoWhAnim.play();
+})
+
+logoGr.addEventListener('click', () => {
+    logoGrAnim.play();
+})
+
+
 // Apply for cat dialogue
 // anchor link that is converted into a button
 const catApplyTrigger = document.querySelector('.neko-browse');
