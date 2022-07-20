@@ -23,7 +23,7 @@
             <nav>
                 <ul class="navigation">
                     {{-- <li id="logo"><a href="/"><lottie><x-si-caterpillar /></lottie></a></li> --}}
-                    <li><a href="/"> </a></li>
+                    <li id="logo"><a href="/"></a></li>
                     {{-- <li class="navigation-item"><a href="/login">Manage Nekos</a></li> --}}
                     <li class="navigation-item"><a href="/neko/create">Add Neko</a></li>
                     <li class="navigation-item">
