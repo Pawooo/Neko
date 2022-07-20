@@ -20,9 +20,46 @@ function fadeIn() {
   burgerMenu.classList.toggle('stealth');
   burger.classList.toggle('stealth');
   burgerMenuCloser.classList.toggle('stealth');
-} // Apply for cat dialogue
-// anchor link that is converted into a button
+} // Logo Lottie
 
+
+var logoWh = document.querySelector('#logo');
+var logoGr = document.querySelector('#dark-mode');
+var logoWhAnim = bodymovin.loadAnimation({
+  container: logoWh,
+  // Required
+  path: '/img/lottie/Pawnimation-white.json',
+  // Required
+  renderer: 'svg/canvas/html',
+  // Required
+  loop: true,
+  // Optional
+  autoplay: false,
+  // Optional
+  name: "Logo anim left" // Name for future reference. Optional.
+
+});
+var logoGrAnim = bodymovin.loadAnimation({
+  container: logoGr,
+  // Required
+  path: '/img/lottie/Pawnimatioin-grey.json',
+  // Required
+  renderer: 'svg/canvas/html',
+  // Required
+  loop: true,
+  // Optional
+  autoplay: false,
+  // Optional
+  name: "Logo anim right" // Name for future reference. Optional.
+
+});
+logoWh.addEventListener('click', function () {
+  logoWhAnim.play();
+});
+logoGr.addEventListener('click', function () {
+  logoGrAnim.play();
+}); // Apply for cat dialogue
+// anchor link that is converted into a button
 
 var catApplyTrigger = document.querySelector('.neko-browse'); // selects whole dialog 
 
@@ -64,45 +101,7 @@ function closeDialog() {
     once: true
   }); // You can do setTimeout() here as well
   // catApplyInput.close();
-} // Logo Lottie
-
-
-var logoWh = document.querySelector('#logo');
-var logoGr = document.querySelector('#dark-mode');
-var logoWhAnim = bodymovin.loadAnimation({
-  container: logoWh,
-  // Required
-  path: '/img/lottie/Pawnimation-white.json',
-  // Required
-  renderer: 'svg/canvas/html',
-  // Required
-  loop: true,
-  // Optional
-  autoplay: false,
-  // Optional
-  name: "Logo anim left" // Name for future reference. Optional.
-
-});
-var logoGrAnim = bodymovin.loadAnimation({
-  container: logoGr,
-  // Required
-  path: '/img/lottie/Pawnimatioin-grey.json',
-  // Required
-  renderer: 'svg/canvas/html',
-  // Required
-  loop: true,
-  // Optional
-  autoplay: false,
-  // Optional
-  name: "Logo anim right" // Name for future reference. Optional.
-
-});
-logoWh.addEventListener('click', function () {
-  logoWhAnim.play();
-});
-logoGr.addEventListener('click', function () {
-  logoGrAnim.play();
-});
+}
 
 /***/ }),
 
