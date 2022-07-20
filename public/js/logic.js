@@ -23,7 +23,7 @@ const logoGr = document.querySelector('#dark-mode');
 
 const logoWhAnim = bodymovin.loadAnimation({
     container: logoWh, // Required
-    path: '/img/lottie/Pawnimation-white.json', // Required
+    path: '/img/lottie/Pawnimation-white-b.json', // Required
     renderer: 'svg', // Required
     loop: true, // Optional
     autoplay: false, // Optional
@@ -32,7 +32,7 @@ const logoWhAnim = bodymovin.loadAnimation({
 
 const logoGrAnim = bodymovin.loadAnimation({
     container: logoGr, // Required
-    path: '/img/lottie/Pawnimation-grey.json', // Required
+    path: '/img/lottie/Pawnimation-grey-b.json', // Required
     renderer: 'svg', // Required
     loop: true, // Optional
     autoplay: false, // Optional

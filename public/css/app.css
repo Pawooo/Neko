@@ -49,6 +49,12 @@ body {
     height: clamp(40px, 8vw, 4rem);
 }
 
+#logo-li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 #logo svg {
     /* Styles for lottie */
     padding: 5px;
@@ -224,10 +230,16 @@ nav {
     }
 
     #logo svg {
-        top: 0.1em;
+        /* Lottie */
+        padding: 0;
+        /* Other svgs */
+        /* top: 0.1em; */
     }
     #dark-mode svg {
-        top: 0.1em;
+        /* Lottie */
+        padding: 0;
+        /* Other svgs */
+        /* top: 0.1em; */
     }
 }
 

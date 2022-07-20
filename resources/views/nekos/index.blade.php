@@ -3,7 +3,7 @@
 
         @section('content')
         
-        <h1 data-page="top-page">A Purrfect Dose of Love</h1>
+        <h1 data-page="top-page">Help these cuties find a new home</h1>
         <div class="splide" role="group" aria-label="Splide Basic HTML Example">
           <div class="splide__track">
                 <ul class="splide__list">

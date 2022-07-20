@@ -2,7 +2,7 @@
 
 @section('content')
 
-<h1>Neko Owner Login</h1>
+<h1>Neko Helper Login</h1>
 
 <form id="neko-touroku" method="POST" action="/users/authenticate">
     @csrf
@@ -35,7 +35,7 @@
 
     <button type="submit" class="neko-touroku-btn">Yup, that's me</button>
 
-    <div>Don't have an account? <a href="/register">Join the Neko Owner Army!</a></div>
+    <div>Don't have an account? <a href="/register">Join the Neko Helper Army!</a></div>
 
 </form>
 

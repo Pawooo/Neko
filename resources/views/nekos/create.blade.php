@@ -23,7 +23,7 @@
     
     <div class="neko-touroku-input">
         <label class="neko-touroku-label-lg" for="tags">
-            Defining Features
+            Defining Features (Comma Separated)
         </label>
         <input type="text" name="tags" placeholder="Fluffy, Muffy, Duffy" value="{{old('tags')}}">
 
