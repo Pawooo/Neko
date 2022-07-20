@@ -59,10 +59,10 @@
         <section id="navmenu">
             <nav>
                 <ul class="navigation">
-                    <li id="logo"><a href="/"><x-si-caterpillar /></a></li>
+                    <li id="logo-li"><a id="logo" href="/"></a></li>
                     <li class="navigation-item"><a href="/login">Login</a></li>
                     <li class="navigation-item"><a href="/register">Register</a></li>
-                    <li id="dark-mode" class="navigation-item"><a href=""><x-si-caterpillar /></a></li>
+                    <li class="navigation-item"><a id="dark-mode" href="/"></a></li>
                     <li id="burger-icon" class=""><x-majestic-menu-solid /></li>
                     <li id="burger-menu-close" class="stealth"><x-icomoon-cross /></li>
                 </ul>
