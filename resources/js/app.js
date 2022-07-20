@@ -22,7 +22,7 @@ const logoGr = document.querySelector('#dark-mode');
 const logoWhAnim = bodymovin.loadAnimation({
     container: logoWh, // Required
     path: '/img/lottie/Pawnimation-white.json', // Required
-    renderer: 'svg/canvas/html', // Required
+    renderer: 'svg', // Required
     loop: true, // Optional
     autoplay: false, // Optional
     name: "Logo anim left", // Name for future reference. Optional.
@@ -31,7 +31,7 @@ const logoWhAnim = bodymovin.loadAnimation({
 const logoGrAnim = bodymovin.loadAnimation({
     container: logoGr, // Required
     path: '/img/lottie/Pawnimatioin-grey.json', // Required
-    renderer: 'svg/canvas/html', // Required
+    renderer: 'svg', // Required
     loop: true, // Optional
     autoplay: false, // Optional
     name: "Logo anim right", // Name for future reference. Optional.
@@ -90,3 +90,4 @@ function closeDialog() {
   // You can do setTimeout() here as well
   // catApplyInput.close();
 }
+

@@ -30,7 +30,7 @@ var logoWhAnim = bodymovin.loadAnimation({
   // Required
   path: '/img/lottie/Pawnimation-white.json',
   // Required
-  renderer: 'svg/canvas/html',
+  renderer: 'svg',
   // Required
   loop: true,
   // Optional
@@ -44,7 +44,7 @@ var logoGrAnim = bodymovin.loadAnimation({
   // Required
   path: '/img/lottie/Pawnimatioin-grey.json',
   // Required
-  renderer: 'svg/canvas/html',
+  renderer: 'svg',
   // Required
   loop: true,
   // Optional
