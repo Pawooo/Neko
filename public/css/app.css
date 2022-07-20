@@ -1,0 +1,1054 @@
+/* Reset */
+*, *::before, *::after {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* html, body {
+    min-height: 100vh;
+} */
+
+main {
+    min-height: 65vh;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Color Variables */
+:root {
+    --main-bg: hsl(0, 0, 3%);
+    --main-accent: hsl(323, 56%, 70%);
+    --backdrop-bg: hsl(227, 10%, 28%);
+    --main-accent-saturated: hsl(314, 83%, 44%);
+    --main-accent-lighter: hsl(313, 89%, 85%);
+    --white: hsl(60, 100%, 99%);
+    --main-background: hsl(270, 2%, 21%);
+}
+
+/* Typography */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Main */
+body {
+    accent-color: var(--white);
+    background-color: var(--main-background);
+    /* background-color: var(--main-bg);  */
+}
+
+#logo svg {
+    height: clamp(40px, 8vw, 3rem);
+    position: relative;
+    top: 0.2em;
+}
+
+#dark-mode svg {
+    height: clamp(40px, 8vw, 3rem);
+    color: var(--main-background);
+    position: relative;
+    top: 0.2em;
+}
+
+/* Navigation */
+
+nav {
+    font-size: clamp(16px, 8vw, 2rem);
+}
+
+
+#navmenu {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 3;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    color: var(--white);
+    background-color: var(--main-accent-saturated);
+    /* position: fixed; */
+}
+
+.navigation a {
+    color: var(--white);
+}
+
+.navigation-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#burger-icon {
+    display: none;
+}
+
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    /* gap: 0.5em; */
+    overflow: hidden;
+    opacity: 1;
+    transition: 1s ease-in-out;
+    position: absolute;
+    width: 100%;
+    height: 94vh;
+    z-index: 999;
+    background-color: var(--main-background);
+}
+
+.burger-menu.stealth {
+    display: none;
+    opacity: 0;
+    /* flex-direction: column;
+    gap: 0.5em;
+    overflow: hidden;
+    opacity: 1;
+    transition: 1s ease-in-out;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    z-index: 4;
+    background-color: var(--main-background); */
+}
+
+#burger-menu-close.stealth {
+    display: none;
+}
+
+@media (max-width: 576px) {
+    .navigation {
+        justify-content: space-around;
+        height: 6vh;
+    }
+    #burger-icon {
+        display: flex;
+        align-items: center;
+        width: clamp(1rem, 8vw, 2rem);
+        cursor: pointer;
+    }
+    /* Icon switching */
+    #burger-icon.stealth {
+        display: none;
+    }
+    #burger-menu-close {
+        position: relative;
+        width: clamp(1.25rem, 5vw, 2rem);
+        cursor: pointer;
+        /* align-self: flex-end;
+        bottom: 0.1em; */
+        /* padding: 5px; */
+    }
+
+    #burger-icon svg {
+        width: clamp(1rem, 8vw, 2rem);
+    }
+    .navigation .navigation-item {
+        display: none;
+    }
+    #burger-menu .navigation-item {
+        height: 100%;
+        font-size: clamp(1rem, 10vw, 10rem);
+    }
+    #burger-menu .navigation-item form button {
+        display: block;
+        width: 100%;
+    }
+    #burger-menu a:nth-of-type(odd) {
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-accent);
+    }
+    #burger-menu a:nth-of-type(even) {
+        width: 100%;
+        height: 100%;
+        background-color: var(--main-accent-lighter);
+    }
+    /* Logout button */
+    #logout-burger {
+        width: 100%;
+        background-color: var(--main-accent-lighter);
+        cursor: pointer;
+    }
+    #logout-burger form {
+       width: 100%;
+       height: 100%;     
+    }
+    #logout-burger button {
+        font-size: clamp(1rem, 10vw, 10rem);
+        width: 100%;
+        height: 100%;
+    }
+
+    #logout-burger:hover, 
+    #logout-burger:focus {
+        background-color: var(--main-accent-saturated);
+    }
+
+    #burger-menu a {
+        color: var(--white);
+        display: block;
+    }
+    #burger-menu a:hover, 
+    #burger-menu a:focus {
+        background-color: var(--main-accent-saturated);
+    }
+
+    #logo svg {
+        top: 0.1em;
+    }
+    #dark-mode svg {
+        top: 0.1em;
+    }
+}
+
+/* Logout button styling */
+.navigation-item form button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    color: var(--white);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(16px, 8vw, 2rem);
+} 
+
+
+/* Titles */
+
+h1 {
+    font-size: clamp(3rem, 8vw, 5rem);
+    text-align: center;
+    color: var(--main-accent-saturated);
+    mix-blend-mode: lighten;
+    margin: 0.2em;
+    /* color: var(--white); */
+}
+
+/* Splide-related */
+
+.splide__img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+/* Neko Card */
+.neko-card {
+    width: 300px;
+    height: 500px;
+    border-radius: 2rem;
+    border: 10px solid var(--backdrop-bg);
+    background-color: var(--backdrop-bg);
+    /* border: 10px solid var(--main-accent);
+    background-color: var(--main-accent); */
+    display: flex;
+    flex-direction: column;
+    /* gap: 0.5rem; */
+    color: var(--white);
+    overflow: hidden;
+    justify-content: space-around;
+    transition: 0.5s ease-in-out;
+}
+
+.neko-card-wrapper {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.neko-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 1.5rem 1.5rem 0 0;
+    -o-object-fit: cover;
+       object-fit: cover;
+    align-self: flex-start;
+    /* flex: 1; */
+    transition: 0.5s ease-in-out;
+}
+
+.neko-img-mask {
+    width: 100%;
+    height: 200px;
+    border-radius: 1.5rem 1.5rem 0 0;
+    overflow: hidden;
+    position: relative;
+    top: -1rem;
+}
+
+.neko-card:hover .neko-img {
+    transform: scale(1.1);    
+}
+
+.neko-card:hover {
+    box-shadow: 0px 0px 10px var(--main-accent-saturated);
+}
+
+.neko-text {
+    color: var(--white);
+    padding: 0.2rem;
+    flex-grow: 0.5;
+}
+
+.neko-browse {
+    text-decoration: none;
+    align-self: center;
+    border: 0;
+    border-radius: 1rem;
+    width: 80%;
+    height: clamp(60px, 3vw, 6vw);
+    font-size: clamp(1.5rem, 1vw, 3vw);
+    background-color: var(--white);
+    color: var(--white);
+    transition: 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 600;
+    color: var(--main-background);
+    margin: 2rem 0rem;
+}
+
+[data-btn="rainbow"] {
+    --border-width: 5px;
+    border-radius: 100rem;
+    position: relative;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    width: 80%;
+    height: clamp(60px, 3vw, 6vw);
+    /* font-family: Lato, sans-serif; */
+    /* font-size: 2.5rem; */
+    text-transform: uppercase;
+    /* color: white; */
+    /* background: #222; */
+    border-radius: var(--border-width);
+}  
+
+[data-btn="rainbow"]::after {
+      position: absolute;
+      content: "";
+      top: calc(-1 * var(--border-width));
+      left: calc(-1 * var(--border-width));
+      z-index: -1;
+      width: calc(100% + var(--border-width) * 2);
+      height: calc(100% + var(--border-width) * 2);
+      background: linear-gradient(
+        60deg,
+        hsl(224, 85%, 66%),
+        hsl(269, 85%, 66%),
+        hsl(314, 85%, 66%),
+        hsl(359, 85%, 66%)
+        /* hsl(44, 85%, 66%),
+        hsl(89, 85%, 66%),
+        hsl(134, 85%, 66%),
+        hsl(179, 85%, 66%) */
+      );
+      background-size: 300% 300%;
+      background-position: 0 50%;
+      border-radius: calc(2 * var(--border-width));
+      -webkit-animation: moveGradient 20s alternate infinite;
+              animation: moveGradient 20s alternate infinite;
+}
+  
+  @-webkit-keyframes moveGradient {
+    65% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  @keyframes moveGradient {
+    65% {
+      background-position: 100% 50%;
+    }
+  }
+  
+
+.neko-browse:hover,
+.neko-browse:focus {
+    background-color: var(--main-accent-saturated);
+    color: var(--white);
+}
+
+/* Solo-neko */
+
+.neko-big-card {
+    width: 90%;
+    /* height: 80vh; */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.neko-big-name {
+    font-size: clamp(3rem, 10vw, 5rem);
+    text-align: center;
+}
+
+.neko-big-img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.neko-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5em;
+    font-size: clamp(1rem, 2vw, 10vw);
+    color: var(--white)
+}
+
+.neko-details p {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+}
+
+.neko-details svg {
+    height: clamp(1rem, 2vw, 10vw);
+    min-width: 1rem;
+}
+
+/* Searchbar */
+#searchbar-wrapper {
+    margin-top: 2rem;
+}
+
+#searchbar {
+    width: 90%;
+    /* height: 200px; */
+    border: 2px solid var(--main-background);
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    height: clamp(75px, 5vw, 10rem);
+}  
+
+#searchbar > * {
+    flex: 1;
+}
+
+#searchbar div {
+    flex-grow: 3;
+    border: 2px solid var(--main-background);
+}
+
+#searchbar button {
+    font-size: clamp(1.25rem, 2vw, 10rem);
+    background-color: var(--white);
+    color: var(--main-background);
+    border: 2px solid var(--main-background);
+    transition: 0.5s ease-in-out;
+}
+
+#searchbar button:hover {
+    background-color: var(--main-accent-saturated);
+    color: var(--white);
+}
+
+#searchbar button svg {
+    height: clamp(1.25rem, 2vw, 10rem);
+    color: var(--main-background);
+    transition: 0.5s ease-in-out;
+}
+
+#searchbar button:hover svg {
+    color: var(--white);
+}
+
+#searchbar input[type="text"],
+#searchbar input[type="email"],
+#searchbar select,
+#searchbar textarea { 
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: clamp(1.25rem, 2vw, 10rem);
+}
+
+#searchbar input {
+    height: 100%;
+}
+
+#searchbar svg {
+    position: relative;
+    top: 0.1em;
+    margin-right: 0.1em;
+}
+
+/* Pagination */
+.pagination nav {
+    margin-top: 2rem;
+    text-decoration: none;
+    color: var(--white);
+    display: flex;
+    justify-content: space-evenly;
+    gap: 0.5em;
+    /* align-items: center; */
+    /* text-align: center; */
+    padding: 1rem;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: var(--white);
+    border: 2px solid var(--white);
+    border-radius: 1rem;
+    padding: 1rem;
+    transition: 0.4s ease-in-out;
+}
+
+.pagination a:hover {
+    color: var(--main-accent-saturated);
+    border: 2px solid var(--main-accent-saturated);
+}
+
+.pagination span {
+    padding: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: var(--white);
+    color: var(--main-background);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: clamp(200px, 4vw, 30vh);
+    margin-top: 2em;
+}
+
+.footer-links a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--main-background);
+    font-size: clamp(1rem, 2vw, 3rem);
+    /* border-bottom: none; */
+    /* transition: 0.5s ease-in-out; */
+}
+
+.footer-links a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: var(--backdrop-bg);
+    transition: width 0.5s ease-in;
+}
+
+.footer-links a:hover::after {
+    /* border-bottom: 1px solid var(--main-background); */
+    width: 100%;
+}
+
+.social-links ul {
+    display: flex;
+    gap: 0.5em;
+}
+
+footer svg {
+    color: var(--main-background);
+    height: clamp(30px, 4vw, 4rem);
+}
+
+/* Neko Tags */
+.neko-tags {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin-bottom: 0.3em;
+}
+
+.neko-tags svg {
+    width: clamp(1rem, 2vw, 30px);
+}
+
+.neko-tag a {
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--main-accent-saturated);
+    padding: 0.2em 0.5em;
+    border-radius: 0.5em;
+}
+
+.neko-tag a:hover {
+    background-color: var(--main-accent-lighter);
+}
+
+/* Audio Controller */
+audio::-webkit-media-controls-panel {
+    /* background-color: var(--main-background); */
+}
+
+/* Dialog (Adopt a Cat) */
+#cat-apply {
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    border: none;
+    border-radius: 10px;
+    /* the easiest way to center dialog (if you override it with * margin: 0) */
+    margin: auto;
+    font-size: clamp(1rem, 2vw, 10rem);
+    padding: 2em;
+    text-align: center;
+}
+
+#cat-apply,
+#cat-apply > * {
+    border-radius: 1rem;
+}
+
+dialog::-webkit-backdrop {
+    background: rgba(0,0,0,0.5);
+    /* Maybe the opacity fade does not work because you specify opacity in alpha channel? */
+    /* opacity: 1; */
+}
+
+dialog::backdrop {
+    background: rgba(0,0,0,0.5);
+    /* Maybe the opacity fade does not work because you specify opacity in alpha channel? */
+    /* opacity: 1; */
+}
+
+dialog[open] {
+    -webkit-animation:
+     fade-in 500ms forwards,
+     slide-up 500ms forwards;
+            animation:
+     fade-in 500ms forwards,
+     slide-up 500ms forwards;
+}
+
+dialog[close] {
+    display: block;
+    pointer-events: none;
+    inset: 0;
+    -webkit-animation: fade-out 500ms forwards;
+            animation: fade-out 500ms forwards;
+}
+
+dialog[close]::-webkit-backdrop {
+    -webkit-animation: fade-out 500ms forwards;
+            animation: fade-out 500ms forwards;
+}
+
+dialog[close]::backdrop {
+    -webkit-animation: fade-out 500ms forwards;
+            animation: fade-out 500ms forwards;
+}
+
+
+dialog[open]::-webkit-backdrop {
+    /* animation might not work on Firefox, could be a glitch */
+    -webkit-animation: fade-in 500ms forwards;
+            animation: fade-in 500ms forwards;
+    /* opacity: 1;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)); */
+}
+
+
+dialog[open]::backdrop {
+    /* animation might not work on Firefox, could be a glitch */
+    -webkit-animation: fade-in 500ms forwards;
+            animation: fade-in 500ms forwards;
+    /* opacity: 1;
+    background: linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.4)); */
+}
+
+/* Slide Fade-in setup (used elsewhere as well) */
+@-webkit-keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes slide-up {
+    0% {
+        transform: translateY(100%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+#cat-apply form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+    font-size: clamp(16px, 8vw, 2rem);
+}
+
+#cat-apply input {
+    accent-color: var(--main-accent-saturated);
+    /* Accent-color as of 06.30.2022 works only on checkbox/radio/range/progress input types */
+    border: 1px solid var(--main-accent-saturated);
+    width: 100%;
+    height: clamp(1.25rem, 2vw, 10rem);
+}
+
+#cat-apply button {
+    background-color: var(--white);
+    padding: 0.5em;
+    font-size: clamp(1.25rem, 2vw, 10rem);
+}
+
+[data-dialog-close] svg {
+height: clamp(2rem, 2vw, 4rem);
+   position: absolute;
+   right: 2em;
+   top: 1em;
+}
+
+
+/* Register Neko Form /create */
+/* Reset */
+#neko-touroku fieldset,
+/* #neko-touroku input, */
+#neko-touroku legend,
+#neko-touroku select,
+#neko-touroku textarea {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  /* background-color: transparent; */
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#neko-touroku input,
+#neko-touroku select,
+#neko-touroku textarea {
+  border: 2px solid var(--main-background);
+  background-color: white;
+  border-radius: 0.25rem;
+}
+
+#neko-touroku textarea {
+    min-height: 10rem;
+}
+
+/* Form Typography (for textarea) */
+textarea {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: clamp(1rem, 1.5vw, 4rem);
+}
+
+
+/* Radio Buttons */
+input[type="radio"],
+input[type="checkbox"] {
+  height: clamp(1em, 2vw, 2.5em);
+  width: clamp(1em, 2vw, 2.5em);
+  vertical-align: middle;
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+
+/* Specific */
+#neko-touroku {
+    margin: auto;
+    width: 90%;
+    font-size: clamp(1rem, 2vw, 4rem);
+    box-sizing: border-box;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--white);
+    border: 4px solid var(--white);
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    box-shadow: inset;
+    accent-color: var(--main-background);
+}
+
+#neko-touroku label {
+    line-height: 1rem;
+}
+
+#neko-touroku select {
+    background: url("/img/SVG/tr-down.svg") no-repeat center right 1rem;
+    background-size: clamp(1rem, 2vw, 2rem);      
+}
+
+.neko-touroku-label-lg {
+    font-weight: 600;
+}
+
+.neko-touroku-input {
+    transition: 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+/* .neko-touroku-input input {
+    padding: 0.5em;
+} */
+
+#neko-touroku input::-moz-placeholder, #neko-touroku textarea::-moz-placeholder {
+    /* opacity: 1;  */
+    /* Firefox */
+    /* color: var(--main-accent-saturated); */
+    font-size: clamp(1rem, 1.5vw, 4rem);
+    padding: 0.5em;
+    min-height: 2rem;
+    cursor: pointer;
+}
+
+#neko-touroku input:-ms-input-placeholder, #neko-touroku textarea:-ms-input-placeholder {
+    /* opacity: 1;  */
+    /* Firefox */
+    /* color: var(--main-accent-saturated); */
+    font-size: clamp(1rem, 1.5vw, 4rem);
+    padding: 0.5em;
+    min-height: 2rem;
+    cursor: pointer;
+}
+
+#neko-touroku input::placeholder,
+#neko-touroku textarea::placeholder,
+.neko-touroku-input input,
+#neko-touroku textarea,
+.neko-touroku-input select {
+    /* opacity: 1;  */
+    /* Firefox */
+    /* color: var(--main-accent-saturated); */
+    font-size: clamp(1rem, 1.5vw, 4rem);
+    padding: 0.5em;
+    min-height: 2rem;
+    cursor: pointer;
+}
+/* Select element padding needs a bigger number */
+#neko-touroku select {
+    padding: 0.8em;
+}
+
+/* File Upload Button Styling */
+#neko-touroku input[type="file"] {
+    /* background-color: var(--main-background); */
+    border: none;
+    padding: 0;
+    transition: 0.5s ease-in-out;
+    /* color: var(--white); */
+}
+
+#neko-touroku input[type="file"]::-webkit-file-upload-button {
+    height: 100%;
+    background-color: var(--main-background);
+    color: var(--white);
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.5em;
+}
+
+#neko-touroku input[type="file"]::file-selector-button,
+#neko-touroku input[type="file"]::-webkit-file-upload-button {
+    height: 100%;
+    background-color: var(--main-background);
+    color: var(--white);
+    border: none;
+    border-radius: 0.2rem;
+    padding: 0.5em;
+}
+
+#neko-touroku input[type="file"]:hover {
+    background-color: var(--main-background);
+    color: var(--white);
+}
+
+/* Create Neko Submit Button */
+.neko-touroku-btn {
+    background-color: var(--main-background);
+    border: 2px solid var(--main-background);
+    color: var(--white);
+    font-size: clamp(1rem, 2vw, 4rem);
+    height: clamp(3rem, 10vw, 5rem);
+    padding: 0.5em;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+.neko-touroku-btn:hover {
+    background-color: var(--white);
+    color: var(--main-background);
+    padding: 0.5em;
+    cursor: pointer;
+}
+
+.neko-touroku-error {
+    color: var(--main-accent-saturated);
+}
+
+/* Form Submission Confirmation Dialog */
+[data-neko-added-successfully-dialog] {
+    margin: auto;
+    padding: 1rem;
+    width: 70%;
+    border: 10px solid var(--main-accent);
+}
+
+[data-neko-added-successfully-dialog] div p {
+    font-size: clamp(1rem, 4vw, 3rem);
+    text-align: center;
+}
+
+[data-neko-added-successfully-dialog] .neko-browse {
+    --border-width: 10px;
+    outline-offset: calc(var(--border-width)-1px);
+}
+
+.dialog-resolver {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 1.7em;
+    /* accent-color: rgba(0, 0, 0, 0); */
+}
+
+@media (max-width: 760px) {
+    .dialog-resolver {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1em;
+        outline-offset: var(--border-width);
+    }
+}
+
+/* Neko button wrapper */
+
+/* Neko edit/delete btn */
+.neko-big-img-wrapper {
+    position: relative;
+    width: 100%;
+    height: 300px;
+}
+
+/* This solution seems (form was overlapping tag elements, but I need it to be a form element with a button for accessibility reasons) stupid, but I coudn't find anything better */
+#neko-card-delete-form {
+    width: 0;
+    height: 0;
+}
+
+.neko-btn-block button {
+    all: unset;
+}
+
+[data-edit-neko-btn] svg,
+[data-delete-neko-btn] svg {
+    background-color: var(--white);
+    border-radius: 50%;
+    padding: 3px;
+    color: var(--main-background);
+    height: clamp(1.5rem, 2vw, 4rem);
+    position: absolute;
+    right: 2em;
+    top: 1em;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+[data-edit-neko-btn] svg {
+    right: 4.5em;
+    top: 1em;
+}
+
+@-webkit-keyframes pencil-rotation {
+    0% { transform: rotate(0deg); }
+    30% { transform: rotate(5deg); }
+    66% { transform: rotate(-10deg); }
+    100% { transform: rotate(3deg); }
+}
+
+@keyframes pencil-rotation {
+    0% { transform: rotate(0deg); }
+    30% { transform: rotate(5deg); }
+    66% { transform: rotate(-10deg); }
+    100% { transform: rotate(3deg); }
+}
+
+[data-edit-neko-btn] svg:hover,
+[data-delete-neko-btn] svg:hover {
+    background-color: var(--main-background);
+    color: var(--white);
+    -webkit-animation: pencil-rotation 1000ms;
+            animation: pencil-rotation 1000ms;
+}
+
+/* Neko edit btn on Index Page */
+.neko-img-mask [data-edit-neko-btn] {
+    position: absolute;
+    right: -4em;
+    top: 0.2em;
+    z-index: 2;
+    transition: 0.5s ease-in-out;
+}
