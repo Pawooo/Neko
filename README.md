@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://user-images.githubusercontent.com/106813449/179925315-c67be2bc-2ea2-492d-a642-3dcb288fde4b.png" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://user-images.githubusercontent.com/106813449/179925715-60a57d70-06ae-4a4a-914a-f16f3dbc1ad7.png" width="400"></a></p>
 
 # Neko
 Help lost cats find a new home
