@@ -46,7 +46,7 @@ body {
 }
 
 #logo {
-    height: 100%;
+    height: clamp(40px, 8vw, 4rem);
 }
 
 #logo svg {
