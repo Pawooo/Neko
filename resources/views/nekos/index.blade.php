@@ -21,9 +21,9 @@
                         ->limit(6)
                         ->get()
                     --}}
-                    @foreach ($randImgs as $randImg)
+                    {{-- @foreach ($randImgs as $randImg)
                         <li class="splide__slide"><img class="splide__img" src="{{$randImg['img']}}" alt="Cat Carousel Image"></li>
-                    @endforeach
+                    @endforeach --}}
                     {{-- Ideal static output in case you want it
                         <li class="splide__slide"><img class="splide__img" src="/img/alvan-nee-ZCHj_2lJP00-unsplash.jpg" alt=""></li>
                         <li class="splide__slide"><img class="splide__img" src="/img/daria-shatova-46TvM-BVrRI-unsplash.jpg" alt=""></li>
