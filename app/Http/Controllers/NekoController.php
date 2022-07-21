@@ -13,13 +13,13 @@ class NekoController extends Controller
     public function index() {
         return view('nekos.index', [
             // 'headings' => 'Latest Listings',
-            'nekos' => Neko::all()
-            // 'nekos' => Neko::latest()->filter(request(['tag', 'nekosagashi']))->simplePaginate(8),
+            // 'nekos' => Neko::all()
+            'nekos' => Neko::latest()->filter(request(['tag', 'nekosagashi']))->simplePaginate(8),
             // 'allImgs' => Neko::latest()->filter(request(['img']))
-            // 'randImgs' => Neko::latest()
-            //                 ->inRandomOrder()
-            //                 ->limit(4)
-            //                 ->get()
+            'randImgs' => Neko::latest()
+                            ->inRandomOrder()
+                            ->limit(4)
+                            ->get()
         ]);
     } 
     
