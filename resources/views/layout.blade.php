@@ -10,7 +10,7 @@
         <link rel="manifest" href="/site.webmanifest"> 
         <link rel="stylesheet" href="/css/app.css">
         <link rel="stylesheet" href="/css/splide.min.css">
-        <script type="module" src="/js/splide.min.js" defer></script>
+        {{-- <script type="module" src="/js/splide.min.js" defer></script> --}}
         <script type="module" src="/js/lottie.min.js" defer></script>
         <script type="module" src="/js/splide-extension-auto-scroll.min.js" defer></script>
         <script type="module" src="/js/logic.js" defer></script>
