@@ -1,7 +1,7 @@
 @props(['neko'])
 
 <div class="neko-card">
-    <div class="neko-img-mask"><img src="{{asset('/storage/'.$neko['img'])}}" alt="" class="neko-img">
+    <div class="neko-img-mask"><img src="{{secure_asset('/storage/'.$neko['img'])}}" alt="" class="neko-img">
         @auth
             <div data-edit-neko-btn>
                 <a href="/neko/{{$neko['id']}}/edit">
