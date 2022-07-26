@@ -42,7 +42,7 @@
                 @if($Neko['purrsound']) 
                 <p>
                     <x-elusive-speaker />
-                    <audio controls src="../{{$Neko['purrsound']}}"></audio>
+                    <audio controls src="{{asset('/storage/'.$Neko['purrsound'])}}"></audio>
                     {{-- Purring Sound --}}
                 </p>
                 @endif
