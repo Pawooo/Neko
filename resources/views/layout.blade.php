@@ -15,7 +15,7 @@
         <script type="module" src="/js/splide-extension-auto-scroll.min.js" defer></script>
         <script type="module" src="/js/logic.js" defer></script>
         <script type="module" src="/js/splide-checker.js" defer></script>
-        <title>NekoSagashi</title>
+        <title>Neko Finder</title>
     </head>
     <body>
         @auth
