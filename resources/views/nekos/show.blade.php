@@ -2,7 +2,7 @@
 @section('content')
     <h1 class="neko-big-name">{{$Neko['name']}}</h1>
     <div class="neko-card-wrapper">
-        <div class="neko-big-img-wrapper"><img src="/{{$Neko['img']}}" alt="" class="neko-big-img">
+        <div class="neko-big-img-wrapper"><img src="{{asset('/storage/'.$Neko['img'])}}" alt="" class="neko-big-img">
         <div class="neko-btn-block">
             <button data-edit-neko-btn>
                 <a href="./{{$Neko['id']}}/edit">
