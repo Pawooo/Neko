@@ -22,7 +22,7 @@
                         ->get()
                     --}}
                     @foreach ($randImgs as $randImg)
-                        <li class="splide__slide"><img class="splide__img" src="{{$randImg['img']}}" alt="Cat Carousel Image"></li>
+                        <li class="splide__slide"><img class="splide__img" src="{{asset('storage/nekoimg/$randImg['img']')}}" alt="Cat Carousel Image"></li>
                     @endforeach
                     {{-- Ideal static output in case you want it
                         <li class="splide__slide"><img class="splide__img" src="/img/alvan-nee-ZCHj_2lJP00-unsplash.jpg" alt=""></li>
@@ -37,7 +37,7 @@
         </div>
         <section>
             <div>
-                <img class="splide__img" src="/nekoimg/tran-mau-tri-tam-FbhNdD1ow2g-unsplash.jpg" alt="">
+                <img class="splide__img" src="storage/nekoimg/tran-mau-tri-tam-FbhNdD1ow2g-unsplash.jpg" alt="">
             </div>
         </section>
         <section id="searchbar-wrapper">
